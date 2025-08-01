@@ -1,0 +1,25 @@
+
+Create a Python following these instrunctions:
+
+# Main Goal
+[<<- DESCRIBE SCRIPT'S GOAL HERE ->>]
+
+# Core Requirements
+- CLI: Use click with options only (no arguments).
+- Output: Use rich for all console output (header, footer, logs).
+- Implement print_header() and print_footer() functions.
+- Create a log_debug(message, data) function that is only active when --debug is used.
+- Use distinct colors for INFO, WARN, and ERROR messages.
+
+# Structure:
+- Organize code into functions with docstrings.
+- Use if __name__ == "__main__":
+
+# CLI Options to Implement:
+--input-file, -i: (Required) Path to the input file.
+--output-path, -o: (Optional) Directory to save results.
+--verbose, -v: (Flag) Show verbose debugging output.
+[<<- ADD OTHER OPTIONS AS NEEDED ->>]
+
+# Example Usage:
+Include a commented-out example of the run command at the end of the script.
