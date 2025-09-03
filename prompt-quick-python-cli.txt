@@ -16,11 +16,41 @@ Create a Python following these instrunctions:
 - Use progress bars when its useful.
 
 - Use this as reader:
+```
 def print_header():
     """Prints a styled header to the console."""
-    header_text = Text([<<- SCRIPT NAME ->>], style="bold green", justify="center")
-    console.print(Panel(header_text, border_style="green", expand=False))
+    header_text = Text([<<- SCRIPT NAME ->>], style="bold blue", justify="center")
+    console.print(Panel(header_text, border_style="blue", expand=False))
     console.print()
+```
+
+- Use this for the footer:
+```
+def print_panel_end_message(success: bool , duration: float):
+    """Prints a summary of execution details inside a Panel."""
+    
+    completion_timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+    if success:
+        status_message = "[green]Script Finished Successfully[/green]"
+    else:
+        status_message = "[red]Script Failed[/red]"
+
+    summary_message = (
+        f"[bold]{status_message}[/bold]\n"
+        f"Completion Time : {completion_timestamp}\n"
+        f"Total Duration  : [cyan]{duration:.2f} seconds[/cyan]"
+    )
+
+    console.print(
+        Panel.fit(
+            summary_message,
+            title="[blue]Execution Summary[/blue]",
+            border_style="blue",
+            padding=(1, 2)
+        )
+    )
+```
 
 - Print time when start and when it end
 
