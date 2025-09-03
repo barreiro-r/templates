@@ -1,6 +1,9 @@
 
 Create a Python following these instrunctions:
 
+# Script Name
+[<<- SCRIPT NAME ->>]
+
 # Main Goal
 [<<- DESCRIBE SCRIPT'S GOAL HERE ->>]
 
@@ -10,6 +13,16 @@ Create a Python following these instrunctions:
 - Implement print_header() and print_footer() functions.
 - Create a log_debug(message, data) function that is only active when --debug is used.
 - Use distinct colors for INFO, WARN, and ERROR messages.
+- Use progress bars when its useful.
+
+- Use this as reader:
+def print_header():
+    """Prints a styled header to the console."""
+    header_text = Text([<<- SCRIPT NAME ->>], style="bold green", justify="center")
+    console.print(Panel(header_text, border_style="green", expand=False))
+    console.print()
+
+- Print time when start and when it end
 
 # Structure:
 - Organize code into functions with docstrings.
@@ -23,3 +36,5 @@ Create a Python following these instrunctions:
 
 # Example Usage:
 Include a commented-out example of the run command at the end of the script.
+Prefer using long name options.
+
